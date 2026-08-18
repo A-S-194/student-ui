@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { StudentService } from '../../services/student-service';
 import { Student } from '../../models/student.model';
 import {MatInputModule} from '@angular/material/input';
@@ -19,6 +19,7 @@ export class StudentForm {
   
   private fb = inject(NonNullableFormBuilder);
   private studentService = inject(StudentService);
+  private router = inject(Router);
 
   studentForm = this.fb.group({
     name: ['', [Validators.required]],
@@ -39,6 +40,7 @@ export class StudentForm {
         next: (response) => {
           console.log("Student Successfully registered", response);
           this.studentForm.reset();
+          this.router.navigate(['/viewStudents']);
         },
         error: (error) => {
           console.error('Error registering student', error);

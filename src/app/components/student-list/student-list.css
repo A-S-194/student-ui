@@ -1,110 +1,65 @@
 .student-container {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* Header */
-
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .header h2 {
-  margin: 0;
-  font-size: 28px;
+    margin: 0;
 }
 
 .header p {
-  margin: 5px 0 0;
-  color: #666;
+    margin-top: 5px;
 }
-
-/* Add button */
-
-.add-btn {
-  padding: 10px 18px;
-  border: none;
-  border-radius: 6px;
-  background-color: #1976d2;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.add-btn:hover {
-  background-color: #125ca1;
-}
-
-/* Student grid */
 
 .student-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
-
-/* Student card */
 
 .student-card {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-
-  transition: transform 0.2s ease,
-              box-shadow 0.2s ease;
+    width: 100%;
 }
 
-.student-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+.student-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
-
-/* Avatar */
 
 .student-avatar {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  margin-right: 15px;
-
-  border-radius: 50%;
-
-  background-color: #1976d2;
-  color: white;
-
-  font-size: 20px;
-  font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-/* Student information */
-
 .student-details h3 {
-  margin: 0 0 6px;
-  font-size: 18px;
+    margin: 0 0 8px;
 }
 
 .student-details p {
-  margin: 4px 0;
+    margin: 4px 0;
 }
 
 .email {
-  color: #555;
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .age {
-  color: #777;
-  font-size: 13px;
+    font-size: 14px;
 }

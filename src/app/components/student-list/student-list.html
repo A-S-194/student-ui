@@ -4,26 +4,27 @@
             <h2>Students</h2>
             <p>Registered Students</p>
         </div>
-        <button class="add-btn">
+        <button mat-raised-button color="primary" routerLink="/registerStudent">
             + Add Student
         </button>
     </div>
 
     <div class="student-grid">
         @for (student of students$ | async; track student.email) {
-            <div class="student-card">
-                <div class="student-avatar">
-                    {{ student.name.charAt(0).toUpperCase() }}
-                </div>
-
-                <div class="student-details">
-                    <h3>{{student.name}}</h3>
-                    <p class="email"> {{ student.email }}</p>
-                    <p class="age">{{ student.age }}</p>
-                </div>
-            </div>
+            <mat-card class="student-card">
+                <mat-card-content>
+                    <div class="student-content">
+                        <div class="student-avatar">
+                            {{ student.name.charAt(0).toUpperCase() }}
+                        </div>
+                        <div class="student-details">
+                            <h3>{{ student.name }}</h3>
+                            <p class="email">{{ student.email }}</p>
+                            <p class="age">Age: {{ student.age }}</p>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
         }
     </div>
 </div>
-
-<button type="button" routerLink="/registerStudent">Go to Student Registration</button>

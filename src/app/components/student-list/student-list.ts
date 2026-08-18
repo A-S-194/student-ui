@@ -4,10 +4,12 @@ import { Student } from '../../models/student.model';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { RouterLink } from "@angular/router";
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-student-list',
-  imports: [AsyncPipe, RouterLink],
+  imports: [AsyncPipe, RouterLink, MatCardModule, MatButtonModule],
   templateUrl: './student-list.html',
   styleUrl: './student-list.css',
 })
